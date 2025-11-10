@@ -1,7 +1,6 @@
 var threeSum = function(nums) {
     const results = [];
     const sortedNums = nums.sort((a,b) => a-b);
-    console.log(sortedNums);
     
     for (let i = 0; i < sortedNums.length-2; i++) {
         const fixedElement = sortedNums[i];
@@ -9,15 +8,12 @@ var threeSum = function(nums) {
         let leftPtr = i + 1;
         let rightPtr = sortedNums.length - 1;
         if(i > 0 && sortedNums[i] === sortedNums[i - 1]) continue;
-        console.log(fixedElement, leftPtr, rightPtr);
 
         while(leftPtr < rightPtr) {
             const sum = fixedElement + sortedNums[leftPtr] + sortedNums[rightPtr];
 
             if (sum === 0) {
                 results.push([fixedElement, sortedNums[leftPtr] , sortedNums[rightPtr]])
-                console.log([fixedElement, sortedNums[leftPtr] , sortedNums[rightPtr]]);
-
                 leftPtr ++;
             } else if (sum > 0) {
                 rightPtr --;
