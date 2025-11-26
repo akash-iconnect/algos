@@ -157,3 +157,10 @@ const auth = new AuthService(db);
 
 
 
+# How to identify if the server stops working in production
+1 - health check endpoints and add alerts
+2 - use load balancer to check health check endpoints time to time
+3 - infrastructure level we can check in aws
+4 - logs
+5 - Datadog
+6 - if stopped, we can restart using pm2, if it fails more than 5 times, then we can add alerts

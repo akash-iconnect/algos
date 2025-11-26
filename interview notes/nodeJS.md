@@ -153,3 +153,8 @@ Used for Progressive Web Apps (PWAs)
 
 
 
+# process.nextTick()
+process.nextTick() is a Node.js function that schedules a callback to run:
+
+Immediately after the current operation completes, but before the event loop continues.
+It runs after all synchronous code is finished but before any promises or timers
